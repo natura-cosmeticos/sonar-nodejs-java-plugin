@@ -2,7 +2,7 @@
 SonarNodeJS is a code analyzer for NodeJS projects.
 
 ## Features
-* Metrics
+* [Metrics](https://github.com/Murilovisque/sonar-nodejs/blob/master/docs/metrics.md)
 
 ## Get Started
 
