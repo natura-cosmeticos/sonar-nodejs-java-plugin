@@ -13,7 +13,7 @@ import org.junit.Test;
 import org.sonarsource.plugins.nodejs.entities.NodeJSPackage;
 import org.sonarsource.plugins.nodejs.factories.exceptions.EntityBuildingException;
 
-public class NodeJSFactoryTest {
+public class NodeJSPackageFactoryTest {
 
     @Test
     public void shouldBuildNodeJSPackageWithTwoDependenciesAndThreeDevDependencies() throws EntityBuildingException {

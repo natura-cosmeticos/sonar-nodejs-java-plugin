@@ -17,13 +17,16 @@ window.registerExtension('nodejs/dependencies_report', options => {
 		metricKeys: "number_of_dev_dependencies"
 	});
 
-	Promise.all([get_number_of_dependencies, get_number_of_dev_dependencies]).then(responses => {
+	let promises = [get_number_of_dependencies, get_number_of_dev_dependencies].map(p => p.catch(() => null));
+	Promise.all(promises).then(responses => {
 		if (isDisplayed) {
 			let dependenciesFound = false;
 			let header = document.createElement('h2');
 			header.textContent = 'NodeJS dependencies report';
 			options.el.appendChild(header);
 			responses.forEach(res => {
+				if (res == null)
+					return;
 				let measures = res.component.measures;
 				if (measures.length > 0) {
 					dependenciesFound = true;
