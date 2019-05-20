@@ -1,12 +1,17 @@
 # Sonar NodeJS
 SonarNodeJS is a code analyzer for NodeJS projects.
 
+# Project status: work in progress
+
+This project is currently a result of a POC.
+
 ## Features
-* [Metrics](https://github.com/Murilovisque/sonar-nodejs/blob/master/docs/metrics.md)
+* [Metrics](https://github.com/natura-cosmeticos/sonar-nodejs/blob/master/docs/metrics.md)
 
 ## Get Started
 
 To build the plugin and run its unit tests, execute this command from the project's root directory to generate the jar file. After this put the jar file in $SONARQUBE_HOME/extensions/plugins, removing any previous versions of the same plugins:
+
 ```
 mvn clean package
 ```
